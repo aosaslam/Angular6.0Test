@@ -22,12 +22,29 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [              
+            "styles": [
+              "./node_modules/flag-icon-css/css/flag-icon.min.css",
               "src/styles.scss"
             ],
             "scripts": []
           },
           "configurations": {
+            "fr": {
+              "aot": true,
+              "outputPath": "dist/ngUdemySample-fr/",
+              "i18nFile": "src/locale/messages.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "i18nMissingTranslation": "error"
+            },
+            "es": {
+              "aot": true,
+              "outputPath": "dist/ngUdemySample-es/",
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -53,6 +70,12 @@
             "browserTarget": "ngUdemySample:build"
           },
           "configurations": {
+            "fr": {
+              "browserTarget": "ngUdemySample:build:fr"
+            },
+            "es": {
+              "browserTarget": "ngUdemySample:build:es"
+            },
             "production": {
               "browserTarget": "ngUdemySample:build:production"
             }

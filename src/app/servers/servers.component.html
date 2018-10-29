@@ -1,0 +1,10 @@
+<label>{{serverName}}</label>
+<br>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Sample Text" (input)='onUpdateServer()'>      
+    </mat-form-field>
+</form>
+<button mat-raised-button color="primary" [disabled]='!allowNewServer' (click)='onAddServer()'>Add Server</button>
+<p>{{serverCreationStatus}}</p>
+<app-server></app-server>

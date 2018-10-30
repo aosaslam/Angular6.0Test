@@ -2,9 +2,13 @@
 <br>
 <form class="example-form">
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Sample Text" (input)='onUpdateServer()'>      
+        <!-- <input matInput placeholder="Sample Text" (input)='onUpdateServer($event)'> -->
+        <input matInput placeholder="Sample Text" [(ngModel)]='serverName' name="first"> 
     </mat-form-field>
 </form>
+<p *ngIf="serverAdded; else noServer">{{serverCreationStatus}}</p>
+<ng-template #noServer>No Server was created!</ng-template>
+<br>
 <button mat-raised-button color="primary" [disabled]='!allowNewServer' (click)='onAddServer()'>Add Server</button>
-<p>{{serverCreationStatus}}</p>
+<app-server></app-server>
 <app-server></app-server>

@@ -1,0 +1,5 @@
+.example-card {    
+    border-radius: 0% !important;
+    border-bottom: 0.025rem solid darkgrey !important;
+    max-height: 18px;
+}
